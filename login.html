@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Login</title>
+</head>
+<body class="page__body">
+  <header class="header header--login">
+    <h2 class="visually-hidden">Site navigation</h2>
+    <div class="container">
+      <div class="header__wrapper header__wrapper--no-js">
+        <a href="main.html" class="header__logo">
+          <svg class="header__logo-img" width="66" height="66" viewBox="0 0 66 66" role="img" aria-label="Company logo">
+            <use xlink:href="img/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="main main--login">
+    <h2 class="visually-hidden">Create an account</h2>
+    <section class="modal-login modal-login--no-js">
+      <div class="modal-login__header"></div>
+      <div class="modal-login__wrapper">
+        <h2>Log In</h2>
+        <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal-login__input-email">
+            <label class="visually-hidden" for="login-email-id">Enter your email</label>
+            <input type="text" name="login-email" id="login-email-id" placeholder="Your E-mail" required="">
+          </div>
+          <div class="modal-login__input-password">
+            <label class="visually-hidden" for="login-password-id">Enter your password</label>
+            <input type="password" name="login-password" id="login-password-id" placeholder="Password" required="">
+            <a href="#">Forgot your password?</a>
+          </div>
+          <button class="button button--form" type="submit">Log In</button>
+          <span>Don’t have an account?<a href="#">Sign up</a></span>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrapper container">
+      <section class="footer__newsletter">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form class="footer__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="email-field">Enter your email</label>
+          <input type="email" name="email" id="email-field" placeholder="Your E-mail" required="">
+          <button class="button-arrow" type="submit">Sign Up<span></span></button>
+        </form>
+      </section>
+      <section class="footer__navigation">
+        <h2 class="visually-hidden">Site navigation</h2>
+        <ul class="footer__aside-list">
+          <li class="footer__aside-item"><a href="#">Ordering & Payment</a></li>
+          <li class="footer__aside-item"><a href="#">Terms & Conditions</a></li>
+          <li class="footer__aside-item"><a href="#">Returns & Exchanges</a></li>
+          <li class="footer__aside-item"><a href="#">Delivery</a></li>
+        </ul>
+        <ul class="footer__about-us-list">
+          <li class="footer__about-us-item"><a href="#">About CH</a></li>
+          <li class="footer__about-us-item"><a href="#">Stores & Hours</a></li>
+          <li class="footer__about-us-item"><a href="#">Jobs</a></li>
+          <li class="footer__about-us-item"><a href="#">Contact Us</a></li>
+        </ul>
+        <ul class="footer__social-list">
+          <li class="footer__social-item footer__social-item--fb">
+            <a href="#">
+              <svg width="8" height="15" viewBox="0 0 12 21" role="img">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="footer__social-item footer__social-item--inst">
+            <a href="#">
+              <svg width="15" height="15" viewBox="0 0 20 21" role="img">
+                <use xlink:href="img/sprite.svg#icon-inst"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="footer__social-item footer__social-item--pint">
+            <a href="#">
+              <svg width="15" height="15" viewBox="0 0 20 21" role="img">
+                <use xlink:href="img/sprite.svg#icon-pinterest"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li class="footer__social-item footer__social-item--twit">
+            <a href="#">
+              <svg width="15" height="13" viewBox="0 0 20 18" role="img">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>
