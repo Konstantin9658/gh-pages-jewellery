@@ -1,5 +1,19 @@
 'use strict';
 (function () {
+  const body = document.querySelector('.page__body');
+  const mainPage = document.querySelector('#main-page');
+  const catalogPage = document.querySelector('#catalog-page');
+  const accordionMain = document.querySelector('.accordion');
+  const accordionFilter = document.querySelector('.accordion-filter');
+  const slider = document.querySelector('.product__container');
+  const accordionTogglers = body.querySelectorAll('.accordion-toggler');
+
+  if (!catalogPage) {
+    accordionMain.classList.remove('accordion--no-js');
+    slider.classList.remove('product__container--no-js');
+  } else {
+    accordionFilter.classList.remove('accordion-filter--no-js');
+  }
 
   const hideList = (item, className) => {
     item.classList.remove(className);
@@ -9,48 +23,7 @@
     item.classList.add(className);
   }
 
-  // MENU
-
-  const body = document.querySelector('.page__body');
-  const header = document.querySelector('.header');
-  const intro = header.querySelector('.header__intro');
-  const btnMenu = header.querySelector('.button');
-  const headerWrap = header.querySelector('.header__wrapper');
-  const menu = header.querySelector('.header__nav-menu');
-  const overlay = document.querySelector('.overlay');
-  const accordionMain = document.querySelector('.accordion');
-  const accordionFilter = document.querySelector('.accordion-filter');
-  const login = menu.querySelector('#login')
-
-  headerWrap.classList.remove('header__wrapper--no-js');
-  menu.classList.remove('header__nav-menu--no-js');
-  intro.classList.remove('header__intro--no-js');
-
-  if (!accordionFilter) {
-    accordionMain.classList.remove('accordion--no-js');
-  } else {
-    accordionFilter.classList.remove('accordion-filter--no-js');
-  }
-
   const isEscEvent = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
-
-  document.addEventListener('keydown', (evt) => {
-    if (isEscEvent(evt)) {
-      evt.preventDefault();
-      hideMenu(btnMenu, headerWrap, menu);
-      setOverlayHide(overlay);
-    }
-  });
-
-  btnMenu.addEventListener('click', () => {
-    if (btnMenu.classList.contains('button--burger')) {
-      showMenu(btnMenu, headerWrap, menu);
-      setOverlayVisible(overlay);
-    } else {
-      hideMenu(btnMenu, headerWrap, menu);
-      setOverlayHide(overlay);
-    }
-  })
 
   function setOverlayVisible(overlay) {
     body.style.overflow = 'hidden';
@@ -76,6 +49,38 @@
     menu.classList.remove('header__nav-menu--show');
   }
 
+  // MENU
+
+  const header = body.querySelector('.header');
+  const intro = header.querySelector('.header__intro');
+  const btnMenu = header.querySelector('.button');
+  const headerWrap = header.querySelector('.header__wrapper');
+  const menu = header.querySelector('.header__nav-menu');
+  const overlay = document.querySelector('.overlay');
+  const login = menu.querySelector('#login')
+
+  headerWrap.classList.remove('header__wrapper--no-js');
+  menu.classList.remove('header__nav-menu--no-js');
+  intro.classList.remove('header__intro--no-js');
+
+  document.addEventListener('keydown', (evt) => {
+    if (isEscEvent(evt)) {
+      evt.preventDefault();
+      hideMenu(btnMenu, headerWrap, menu);
+      setOverlayHide(overlay);
+    }
+  });
+
+  btnMenu.addEventListener('click', () => {
+    if (btnMenu.classList.contains('button--burger')) {
+      showMenu(btnMenu, headerWrap, menu);
+      setOverlayVisible(overlay);
+    } else {
+      hideMenu(btnMenu, headerWrap, menu);
+      setOverlayHide(overlay);
+    }
+  })
+
   // POPUP
 
   const formTemplate = document.querySelector('#popup').content.querySelector('.modal-login');
@@ -91,6 +96,9 @@
 
     document.body.insertAdjacentElement('beforeend', template);
     setOverlayVisible(overlay);
+
+    let email = template.querySelector('#login-email-id');
+    email.focus()
 
     btnFormClose.addEventListener('click', () => closePopup(template), {once: true});
     overlay.addEventListener('click', () => closePopup(template), {once: true});
@@ -118,14 +126,13 @@
 
   // = = = = = = = = = = = = = = = = = = = = = = = = = = = //
 
-  if (accordionMain) {
+  if (mainPage) {
     // ACCORDION
 
-    const accordionBtn = accordionMain.querySelectorAll('.accordion__toggle');
     const accordionItem = accordionMain.querySelectorAll('.accordion__item');
 
-    for (let i = 0; i < accordionBtn.length; i++) {
-      accordionBtn[i].addEventListener('click', toggleItem, false);
+    for (let i = 0; i < accordionTogglers.length; i++) {
+      accordionTogglers[i].addEventListener('click', toggleItem, false);
     }
 
     function toggleItem() {
@@ -141,84 +148,64 @@
 
     // SLIDER
 
-    let position = 0;
-    let slidesToShow = 4;
-    let slidesToScroll = 4;
-    const container = document.querySelector('.product__container');
-    const track = document.querySelector('.product__cards');
-    const items = track.querySelectorAll('.product__card');
-    const itemsCount = items.length;
-    const itemWidth = container.clientWidth / slidesToShow;
-    const movePosition = slidesToScroll * itemWidth;
-    const btnNext = document.querySelector('.product__control-btn--right');
-    const btnPrev = document.querySelector('.product__control-btn--left');
-
-    // if (matchMedia) {
-    //   let screen = window.matchMedia('(max-width: 1023px)');
-    //   screen.addEventListener(changes);
-    //   changes(screen);
-    // }
-
-    // function changes(screen) {
-    //   if (screen.matches) {
-    //   slidesToShow = 2;
-    //   slidesToScroll = 2;
-    //   btnNext.addEventListener('click', btnNextHandler)
-    //   btnPrev.addEventListener('click', btnPrevHandler)
-    //   } else {
-    //   slidesToScroll = 4;
-    //   slidesToShow = 4;
-    //   btnNext.addEventListener('click', btnNextHandler)
-    //   btnPrev.addEventListener('click', btnPrevHandler)
-    //   }
-    // }
-
-    items.forEach(item => item.style.minWidth = `${itemWidth}px`);
-
-    function btnNextHandler() {
-      const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-      position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-      setPosition();
-      checkBtns();
-    }
-
-    function btnPrevHandler() {
-      const itemsLeft = Math.abs(position) / itemWidth;
-
-      position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-      setPosition();
-      checkBtns();
-    }
-
-    btnNext.addEventListener('click', btnNextHandler)
-    btnPrev.addEventListener('click', btnPrevHandler)
-
-    const setPosition = () => {
-      track.style.transform = `translateX(${position}px)`;
-    }
-
-    const checkBtns = () => {
-      btnPrev.disabled = position === 0;
-      btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-    }
-
-    checkBtns();
-  } else if (accordionFilter) {
-    const accordionFilterBtn = accordionFilter.querySelectorAll('.accordion-filter__btn');
-    const filterOpen = document.querySelector('.button--filter');
-    const filterContent = document.querySelector('.filter-box__inner');
-    const filterClose = document.querySelector('.button--filter-closed');
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      pagination: {
+        el: '.swiper-pagination-fraction',
+        clickable: true,
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+          return `<span class="${currentClass + ' ' + 'product__page-current'}"></span>of
+                  <span class="${totalClass + ' ' + 'product__page-total'}">6</span>`;
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+            bulletActiveClass: 'product__pagination-item--active',
+            bulletClass: 'product__pagination-item',
+            renderBullet: function (index, className) {
+              return `<li class="${className}">${index + 1}</li>`;
+            },
+          },
+        },
+        1024: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          simulateTouch: false,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+            bulletActiveClass: 'product__pagination-item--active',
+            bulletClass: 'product__pagination-item',
+            renderBullet: function (index, className) {
+              return `<li class="${className}">${index + 1}</li>`;
+            },
+          },
+        },
+      },
+    });
+  } else if (catalogPage) {
+    const filterOpen = catalogPage.querySelector('.button--filter');
+    const filterContent = catalogPage.querySelector('.filter-box__inner');
+    const filterClose = catalogPage.querySelector('.button--filter-closed');
     const filterApply = filterContent.querySelector('.button--apply');
-    const filterOverlay = document.querySelector('.filter-box__overlay');
+    const filterOverlay = catalogPage.querySelector('.filter-box__overlay');
 
     filterOpen.addEventListener('click', showFilter)
-
     filterClose.addEventListener('click', hideFilter)
-
     filterApply.addEventListener('click', hideFilter)
-
     filterOverlay.addEventListener('click', hideFilter)
 
     function hideFilter() {
@@ -231,8 +218,8 @@
       body.style.overflow = 'hidden';
     }
 
-    for (let i = 0; i < accordionFilterBtn.length; i++) {
-      accordionFilterBtn[i].addEventListener('click', toggleItem, false);
+    for (let i = 0; i < accordionTogglers.length; i++) {
+      accordionTogglers[i].addEventListener('click', toggleItem, false);
     }
 
     function toggleItem() {

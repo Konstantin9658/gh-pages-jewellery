@@ -5,11 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Top Quality Jewellery">
+  <meta property="og:title" content="Jewellery Online Catalog">
+  <link rel="prefetch" href="fonts/poppins-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/poppins-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/poppins-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/cormorantgaramond-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/cormorantgaramond-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="prefetch" href="fonts/cormorantgaramond-semibold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Catalog</title>
 </head>
 
-<body class="page__body">
+<body class="page__body" id="catalog-page">
   <h1 class="visually-hidden">Online jewelry store</h1>
   <header class="header header-catalog">
     <h2 class="visually-hidden">Site navigation</h2>
@@ -91,7 +99,7 @@
                     <label tabindex="0" for="earrings-id">Earrings</label>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion__toggle" type="button" aria-label="hide/show content"></button>
+                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
               <!-- 2 -->
               <li class="filter-box__item accordion-filter__item">
@@ -106,7 +114,7 @@
                     <label tabindex="0" for="silver-id">Silver</label>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion__toggle" type="button" aria-label="hide/show content"></button>
+                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
               <!-- 3 -->
               <li class="filter-box__item accordion-filter__item">
@@ -121,7 +129,7 @@
                     <label tabindex="0" for="dreams-id">Dreams</label>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion__toggle" type="button" aria-label="hide/show content"></button>
+                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
               <!-- 4 -->
               <li class="filter-box__item accordion-filter__item accordion-filter__item--show">
@@ -143,19 +151,19 @@
                     </div>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion__toggle" type="button" aria-label="hide/show content"></button>
+                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
             </ul>
             <button class="button button--apply" type="button">Apply</button>
             <button class="button button--reset" type="reset">Clear All</button>
           </form>
-          <div class="filter-box__overlay">
-            <button class="button button--filter-closed" type="button"><span></span></button>
-          </div>
+          <div class="filter-box__overlay"></div>
+          <button class="button button--filter-closed" type="button"><span></span></button>
           <button class="button button--filter" type="button">Filter</button>
         </div>
       </section>
       <section class="product product-catalog">
+        <h2 class="visually-hidden">Product catalog</h2>
         <div class="product-catalog__wrapper">
           <!-- 1 -->
           <div class="product__card product-catalog__card">
@@ -269,11 +277,11 @@
         <div class="product-catalog__pagination">
           <button class="product-catalog__pagination-btn" type="button">Previous</button>
           <ul class="product__pagination-list product-catalog__pagination-list">
-            <li class="product__pagination-item product-catalog__pagination-item product__pagination-item--active"><a href="#">1</a></li>
-            <li class="product__pagination-item product-catalog__pagination-item"><a href="#">2</a></li>
-            <li class="product__pagination-item product-catalog__pagination-item"><a href="#">3</a></li>
-            <li class="product__pagination-item product-catalog__pagination-item"><a href="#">4</a></li>
-            <li class="product__pagination-item product-catalog__pagination-item"><a href="#">5</a></li>
+            <li class="product__pagination-item product-catalog__pagination-item product__pagination-item--active">1</li>
+            <li class="product__pagination-item product-catalog__pagination-item">2</li>
+            <li class="product__pagination-item product-catalog__pagination-item">3</li>
+            <li class="product__pagination-item product-catalog__pagination-item">4</li>
+            <li class="product__pagination-item product-catalog__pagination-item">5</li>
           </ul>
           <button class="product-catalog__pagination-btn" type="button">Next</button>
         </div>
