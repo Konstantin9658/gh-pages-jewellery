@@ -157,7 +157,7 @@
         type: 'fraction',
         renderFraction: function (currentClass, totalClass) {
           return `<span class="${currentClass + ' ' + 'product__page-current'}"></span>of
-                  <span class="${totalClass + ' ' + 'product__page-total'}">6</span>`;
+                  <span class="${'product__page-total'}">6</span>`;
         },
       },
       navigation: {
