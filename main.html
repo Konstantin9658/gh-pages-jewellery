@@ -23,7 +23,7 @@
     <h2 class="visually-hidden">Site navigation</h2>
     <div class="container">
       <div class="header__wrapper header__wrapper--no-js">
-        <form class="header__search-field" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="header__search-field" action="https://echo.htmlacademy.ru/" method="get">
           <label class="header__search-field-label" for="search-id">
             <svg class="header__search-field-icon" viewBox="0 0 16 16" width="16" height="16" role="img" aria-label="Icon search">
               <use xlink:href="img/sprite.svg#icon-search"></use>
@@ -40,7 +40,7 @@
           <li class="header__login"><a href="login.html">Login</a></li>
           <li><a href="#">Cart <span>0</span></a></li>
         </ul>
-        <button class="header__nav-btn button button--burger"><span></span></button>
+        <button class="header__nav-btn button button--burger" type="button"><span></span></button>
         <svg class="header__icon-cart" width="20" height="18" role="img">
           <use xlink:href="img/sprite.svg#icon-cart"></use>
         </svg>
@@ -90,7 +90,7 @@
                   <source type="image/webp" srcset="img/catalog-img/purple-gemstone-necklace-desktop.webp 1x, img/catalog-img/purple-gemstone-necklace-desktop@2x.webp 2x">
                   <img loading="lazy" src="img/catalog-img/purple-gemstone-necklace-desktop.jpg" srcset="img/catalog-img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Purple Amethyst Pendant">
                 </picture>
-                <figcaption class="product__item-caption">Necklace with amethyst <br><span>$ 145</span></figcaption>
+                <p>Necklace with amethyst<span>$ 145</span></p>
               </figure>
             </a>
           </li>
@@ -101,9 +101,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/layered-choker-necklace-desktop.webp 1x, img/catalog-img/layered-choker-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/layered-choker-necklace-desktop.jpg" srcset="img/catalog-img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/layered-choker-necklace-desktop.jpg" srcset="img/catalog-img/layered-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="leather choker with a triangle pendant">
                 </picture>
-                <figcaption class="product__item-caption">Layered сhoker <br><span>$ 115</span></figcaption>
+                <p>Layered сhoker<span>$ 115</span></p>
               </figure>
             </a>
           </li>
@@ -114,9 +114,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/dainty-gold-necklace-desktop.webp 1x, img/catalog-img/dainty-gold-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/dainty-gold-necklace-desktop.jpg" srcset="img/catalog-img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/dainty-gold-necklace-desktop.jpg" srcset="img/catalog-img/dainty-gold-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="gold women's chain with three pendants">
                 </picture>
-                <figcaption class="product__item-caption">Gold chain <br><span>$ 215</span></figcaption>
+                <p>Gold chain<span>$ 215</span></p>
               </figure>
             </a>
           </li>
@@ -127,9 +127,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/galaxy-earrings-desktop.webp 1x, img/catalog-img/galaxy-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/galaxy-earrings-desktop.jpg" srcset="img/catalog-img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/galaxy-earrings-desktop.jpg" srcset="img/catalog-img/galaxy-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="silver earrings with galaxy inserts">
                 </picture>
-                <figcaption class="product__item-caption">Galaxy earrings <br><span>$ 95</span></figcaption>
+                <p>Galaxy earrings<span>$ 95</span></p>
               </figure>
             </a>
           </li>
@@ -140,9 +140,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/double-pearl-earrings-desktop.webp 1x, img/catalog-img/double-pearl-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/double-pearl-earrings-desktop.jpg" srcset="img/catalog-img/double-pearl-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/double-pearl-earrings-desktop.jpg" srcset="img/catalog-img/double-pearl-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Pearl Earrings">
                 </picture>
-                <figcaption class="product__item-caption">Double pearl earrings <br><span>$ 115</span></figcaption>
+                <p>Double pearl earrings<span>$ 115</span></p>
               </figure>
             </a>
           </li>
@@ -153,9 +153,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/black-choker-gold-bead-desktop.webp 1x, img/catalog-img/black-choker-gold-bead-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/black-choker-gold-bead-desktop.jpg" srcset="img/catalog-img/black-choker-gold-bead-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/black-choker-gold-bead-desktop.jpg" srcset="img/catalog-img/black-choker-gold-bead-desktop@2x.jpg 2x" width="270" height="284" alt="elegant choker with gold inserts">
                 </picture>
-                <figcaption class="product__item-caption">Choker with gold bead <br><span>$ 55</span></figcaption>
+                <p>Choker with gold bead<span>$ 55</span></p>
               </figure>
             </a>
           </li>
@@ -166,9 +166,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/gold-layered-necklace-desktop.webp 1x, img/catalog-img/gold-layered-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/gold-layered-necklace-desktop.jpg" srcset="img/catalog-img/gold-layered-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/gold-layered-necklace-desktop.jpg" srcset="img/catalog-img/gold-layered-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="gold chain for an evening walk">
                 </picture>
-                <figcaption class="product__item-caption">Gold layered necklace <br><span>$ 155</span></figcaption>
+                <p>Gold layered necklace<span>$ 155</span></p>
               </figure>
             </a>
           </li>
@@ -179,9 +179,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/blue-gemstone-pendant-desktop.webp 1x, img/catalog-img/blue-gemstone-pendant-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/blue-gemstone-pendant-desktop.jpg" srcset="img/catalog-img/blue-gemstone-pendant-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/blue-gemstone-pendant-desktop.jpg" srcset="img/catalog-img/blue-gemstone-pendant-desktop@2x.jpg 2x" width="270" height="284" alt="handmade blue stone on a silver pendant">
                 </picture>
-                <figcaption class="product__item-caption">Blue gemstone pendant <br><span>$ 105</span></figcaption>
+                <p>Blue gemstone pendant<span>$ 105</span></p>
               </figure>
             </a>
           </li>
@@ -192,9 +192,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/boho-earrings-desktop.webp 1x, img/catalog-img/boho-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/boho-earrings-desktop.jpg" srcset="img/catalog-img/boho-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/boho-earrings-desktop.jpg" srcset="img/catalog-img/boho-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="exclusive earrings with a blue stone">
                 </picture>
-                <figcaption class="product__item-caption">Boho earrings <br><span>$ 75</span></figcaption>
+                <p>Boho earrings<span>$ 75</span></p>
               </figure>
             </a>
           </li>
@@ -205,9 +205,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/bird-necklace-desktop.webp 1x, img/catalog-img/bird-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/bird-necklace-desktop.jpg" srcset="img/catalog-img/bird-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/bird-necklace-desktop.jpg" srcset="img/catalog-img/bird-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="cute lady's pendant with a bird">
                 </picture>
-                <figcaption class="product__item-caption">Gold bird necklace <br><span>$ 135</span></figcaption>
+                <p>Gold bird necklace<span>$ 135</span></p>
               </figure>
             </a>
           </li>
@@ -218,9 +218,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/black-leather-choker-necklace-desktop.webp 1x, img/catalog-img/black-leather-choker-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/black-leather-choker-necklace-desktop.jpg" srcset="img/catalog-img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/black-leather-choker-necklace-desktop.jpg" srcset="img/catalog-img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="wide black leather choker with gold clasps">
                 </picture>
-                <figcaption class="product__item-caption">Black leather choker <br><span>$ 85</span></figcaption>
+                <p>Black leather choker<span>$ 85</span></p>
               </figure>
             </a>
           </li>
@@ -231,9 +231,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/elephant-earrings-desktop.webp 1x, img/catalog-img/elephant-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/elephant-earrings-desktop.jpg" srcset="img/catalog-img/elephant-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/elephant-earrings-desktop.jpg" srcset="img/catalog-img/elephant-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="gold earrings in the shape of an elephant inlaid with stones">
                 </picture>
-                <figcaption class="product__item-caption">Elephant earrings <br><span>$ 95</span></figcaption>
+                <p>Elephant earrings<span>$ 95</span></p>
               </figure>
             </a>
           </li>
@@ -244,9 +244,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/threader-necklace-closeup-desktop.webp 1x, img/catalog-img/threader-necklace-closeup-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/threader-necklace-closeup-desktop.jpg" srcset="img/catalog-img/threader-necklace-closeup-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/threader-necklace-closeup-desktop.jpg" srcset="img/catalog-img/threader-necklace-closeup-desktop@2x.jpg 2x" width="270" height="284" alt="silver bracelet">
                 </picture>
-                <figcaption class="product__item-caption">Threader necklace <br><span>$ 115</span></figcaption>
+                <p>Threader necklace<span>$ 115</span></p>
               </figure>
             </a>
           </li>
@@ -257,9 +257,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/origami-crane-necklace-desktop.webp 1x, img/catalog-img/origami-crane-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/origami-crane-necklace-desktop.jpg" srcset="img/catalog-img/origami-crane-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/origami-crane-necklace-desktop.jpg" srcset="img/catalog-img/origami-crane-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="original silver pendant with insert">
                 </picture>
-                <figcaption class="product__item-caption">Origami crane necklace <br><span>$ 105</span></figcaption>
+                <p>Origami crane necklace<span>$ 105</span></p>
               </figure>
             </a>
           </li>
@@ -270,9 +270,9 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/marble-earrings-desktop.webp 1x, img/catalog-img/marble-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/marble-earrings-desktop.jpg" srcset="img/catalog-img/marble-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="">
+                  <img loading="lazy" src="img/catalog-img/marble-earrings-desktop.jpg" srcset="img/catalog-img/marble-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="silver earrings with a marble stone">
                 </picture>
-                <figcaption class="product__item-caption">Marble earrings <br><span>$ 95</span></figcaption>
+                <p>Marble earrings<span>$ 95</span></p>
               </figure>
             </a>
           </li>
@@ -391,7 +391,7 @@
           <figure>
             <picture>
               <!-- 1x: 230 ; 2x: 460 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-1-desktop.webp 1x, img/follow-inst-1-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-1-desktop.webp 1x, img/follow-img/follow-inst-1-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-1-desktop.jpg" srcset="img/follow-img/follow-inst-1-desktop@2x.jpg 2x" width="230" height="230" alt="">
             </picture>
           </figure>
@@ -401,7 +401,7 @@
           <figure>
             <picture>
               <!-- 1x: 399 ; 2x: 798 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-2-desktop.webp 1x, img/follow-inst-2-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-2-desktop.webp 1x, img/follow-img/follow-inst-2-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-2-desktop.jpg" srcset="img/follow-img/follow-inst-2-desktop@2x.jpg 2x" width="399" height="412" alt="">
             </picture>
           </figure>
@@ -411,7 +411,7 @@
           <figure>
             <picture>
               <!-- 1x: 230 ; 2x: 460 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-3-desktop.webp 1x, img/follow-inst-3-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-3-desktop.webp 1x, img/follow-img/follow-inst-3-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-3-desktop.jpg" srcset="img/follow-img/follow-inst-3-desktop@2x.jpg 2x" width="230" height="230" alt="">
             </picture>
           </figure>
@@ -421,7 +421,7 @@
           <figure>
             <picture>
               <!-- 1x: 230 ; 2x: 460 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-4-desktop.webp 1x, img/follow-inst-4-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-4-desktop.webp 1x, img/follow-img/follow-inst-4-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-4-desktop.jpg" srcset="img/follow-img/follow-inst-4-desktop@2x.jpg 2x" width="230" height="230" alt="">
             </picture>
           </figure>
@@ -431,7 +431,7 @@
           <figure>
             <picture>
               <!-- 1x: 230 ; 2x: 460 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-5-desktop.webp 1x, img/follow-inst-5-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-5-desktop.webp 1x, img/follow-img/follow-inst-5-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-5-desktop.jpg" srcset="img/follow-img/follow-inst-5-desktop@2x.jpg 2x" width="230" height="150" alt="">
             </picture>
           </figure>
@@ -441,7 +441,7 @@
           <figure>
             <picture>
               <!-- 1x: 230 ; 2x: 460 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-6-desktop.webp 1x, img/follow-inst-6-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-6-desktop.webp 1x, img/follow-img/follow-inst-6-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-6-desktop.jpg" srcset="img/follow-img/follow-inst-6-desktop@2x.jpg 2x" width="230" height="150" alt="">
             </picture>
           </figure>
@@ -451,7 +451,7 @@
           <figure>
             <picture>
               <!-- 1x: 230 ; 2x: 460 -->
-              <source type="image/webp" srcset="img/follow-img/follow-inst-7-desktop.webp 1x, img/follow-inst-7-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/follow-img/follow-inst-7-desktop.webp 1x, img/follow-img/follow-inst-7-desktop@2x.webp 2x">
               <img loading="lazy" src="img/follow-img/follow-inst-7-desktop.jpg" srcset="img/follow-img/follow-inst-7-desktop@2x.jpg 2x" width="230" height="150" alt="">
             </picture>
           </figure>
