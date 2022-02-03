@@ -29,7 +29,7 @@
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
           </label>
-          <input class="header__search-field-input" type="text" name="search-field" id="search-id" placeholder="Type here to search">
+          <input class="header__search-field-input" type="search" name="search-field" id="search-id" placeholder="Type here to search">
         </form>
         <a href="main.html" class="header__logo header-catalog__logo">
           <svg class="header__logo-img" width="66" height="66" viewBox="0 0 66 66" role="img" aria-label="Company logo">
@@ -80,59 +80,60 @@
             <ul class="filter-box__list accordion-filter accordion-filter--no-js">
               <!-- 1 -->
               <li class="filter-box__item accordion-filter__item accordion-filter__item--show">
+                <button class="accordion-filter__btn accordion-toggler" type="button" tabindex="0" aria-label="hide/show content"></button>
                 <h3>Product</h3>
                 <div class="filter-box__item-content accordion-filter__item-content">
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="product" id="necklaces-id" checked="">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="product" id="necklaces-id" checked="">
                     <label tabindex="0" for="necklaces-id">Necklaces</label>
                   </div>
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="product" id="chokers-id" checked="">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="product" id="chokers-id" checked="">
                     <label tabindex="0" for="chokers-id">Chokers</label>
                   </div>
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="product" id="rings-id">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="product" id="rings-id">
                     <label tabindex="0" for="rings-id">Rings</label>
                   </div>
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="product" id="earrings-id" checked="">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="product" id="earrings-id" checked="">
                     <label tabindex="0" for="earrings-id">Earrings</label>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
               <!-- 2 -->
               <li class="filter-box__item accordion-filter__item">
+                <button class="accordion-filter__btn accordion-toggler" type="button" tabindex="0" aria-label="hide/show content"></button>
                 <h3>Material</h3>
                 <div class="filter-box__item-content accordion-filter__item-content">
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="material" id="gold-id" checked="">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="material" id="gold-id" checked="">
                     <label tabindex="0" for="gold-id">Gold</label>
                   </div>
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="material" id="silver-id">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="material" id="silver-id">
                     <label tabindex="0" for="silver-id">Silver</label>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
               <!-- 3 -->
               <li class="filter-box__item accordion-filter__item">
+                <button class="accordion-filter__btn accordion-toggler" type="button" tabindex="0" aria-label="hide/show content"></button>
                 <h3>Collection</h3>
                 <div class="filter-box__item-content accordion-filter__item-content">
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="collection" id="pink-flamingo-id">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="collection" id="pink-flamingo-id">
                     <label tabindex="0" for="pink-flamingo-id">Pink Flamingo</label>
                   </div>
                   <div class="filter-box__item-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="collection" id="dreams-id" checked="">
+                    <input tabindex="-1" class="visually-hidden" type="checkbox" name="collection" id="dreams-id" checked="">
                     <label tabindex="0" for="dreams-id">Dreams</label>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
               <!-- 4 -->
               <li class="filter-box__item accordion-filter__item accordion-filter__item--show">
+                <button class="accordion-filter__btn accordion-toggler" type="button" tabindex="0" aria-label="hide/show content"></button>
                 <h3>Price</h3>
                 <div class="filter-box__item-content accordion-filter__item-content">
                   <div class="filter-box__range-controls">
@@ -151,7 +152,6 @@
                     </div>
                   </div>
                 </div>
-                <button class="accordion-filter__btn accordion-toggler" type="button" aria-label="hide/show content"></button>
               </li>
             </ul>
             <button class="button button--apply" type="button">Apply</button>
@@ -172,9 +172,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/double-pearl-earrings-desktop.webp 1x, img/catalog-img/double-pearl-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/double-pearl-earrings-desktop.jpg" srcset="img/catalog-img/double-pearl-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="Pearl Earrings">
+                  <img loading="lazy" src="img/catalog-img/double-pearl-earrings-desktop.jpg" srcset="img/catalog-img/double-pearl-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="Pearl Earrings">
                 </picture>
-                <p>Double pearl earrings<span>$ 115</span></p>
+                <p>Double pearl earrings</p>
+                <p>$ 115</p>
               </figure>
             </a>
           </li>
@@ -185,9 +186,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/black-choker-gold-bead-desktop.webp 1x, img/catalog-img/black-choker-gold-bead-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/black-choker-gold-bead-desktop.jpg" srcset="img/catalog-img/black-choker-gold-bead-desktop@2x.jpg 2x" width="270" height="284" alt="elegant choker with gold inserts">
+                  <img loading="lazy" src="img/catalog-img/black-choker-gold-bead-desktop.jpg" srcset="img/catalog-img/black-choker-gold-bead-desktop@2x.jpg 2x" width="270" height="272" alt="elegant choker with gold inserts">
                 </picture>
-                <p>Choker with gold bead<span>$ 55</span></p>
+                <p>Choker with gold bead</p>
+                <p>$ 55</p>
               </figure>
             </a>
           </li>
@@ -198,9 +200,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/gold-layered-necklace-desktop.webp 1x, img/catalog-img/gold-layered-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/gold-layered-necklace-desktop.jpg" srcset="img/catalog-img/gold-layered-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="gold chain for an evening walk">
+                  <img loading="lazy" src="img/catalog-img/gold-layered-necklace-desktop.jpg" srcset="img/catalog-img/gold-layered-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="gold chain for an evening walk">
                 </picture>
-                <p>Gold layered necklace<span>$ 155</span></p>
+                <p>Gold layered necklace</p>
+                <p>$ 155</p>
               </figure>
             </a>
           </li>
@@ -211,9 +214,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/blue-gemstone-pendant-desktop.webp 1x, img/catalog-img/blue-gemstone-pendant-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/blue-gemstone-pendant-desktop.jpg" srcset="img/catalog-img/blue-gemstone-pendant-desktop@2x.jpg 2x" width="270" height="284" alt="handmade blue stone on a silver pendant">
+                  <img loading="lazy" src="img/catalog-img/blue-gemstone-pendant-desktop.jpg" srcset="img/catalog-img/blue-gemstone-pendant-desktop@2x.jpg 2x" width="270" height="272" alt="handmade blue stone on a silver pendant">
                 </picture>
-                <p>Blue gemstone pendant<span>$ 105</span></p>
+                <p>Blue gemstone pendant</p>
+                <p>$ 105</p>
               </figure>
             </a>
           </li>
@@ -224,9 +228,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/boho-earrings-desktop.webp 1x, img/catalog-img/boho-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/boho-earrings-desktop.jpg" srcset="img/catalog-img/boho-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="exclusive earrings with a blue stone">
+                  <img loading="lazy" src="img/catalog-img/boho-earrings-desktop.jpg" srcset="img/catalog-img/boho-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="exclusive earrings with a blue stone">
                 </picture>
-                <p>Boho earrings<span>$ 75</span></p>
+                <p>Boho earrings</p>
+                <p>$ 75</p>
               </figure>
             </a>
           </li>
@@ -237,9 +242,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/bird-necklace-desktop.webp 1x, img/catalog-img/bird-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/bird-necklace-desktop.jpg" srcset="img/catalog-img/bird-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="cute lady's pendant with a bird">
+                  <img loading="lazy" src="img/catalog-img/bird-necklace-desktop.jpg" srcset="img/catalog-img/bird-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="cute lady's pendant with a bird">
                 </picture>
-                <p>Gold bird necklace<span>$ 135</span></p>
+                <p>Gold bird necklace</p>
+                <p>$ 135</p>
               </figure>
             </a>
           </li>
@@ -250,9 +256,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/black-leather-choker-necklace-desktop.webp 1x, img/catalog-img/black-leather-choker-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/black-leather-choker-necklace-desktop.jpg" srcset="img/catalog-img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="wide black leather choker with gold clasps">
+                  <img loading="lazy" src="img/catalog-img/black-leather-choker-necklace-desktop.jpg" srcset="img/catalog-img/black-leather-choker-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="wide black leather choker with gold clasps">
                 </picture>
-                <p>Black leather choker<span>$ 85</span></p>
+                <p>Black leather choker</p>
+                <p>$ 85</p>
               </figure>
             </a>
           </li>
@@ -262,10 +269,11 @@
               <figure>
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
-                  <source type="image/webp" srcset="img/catalog-img/purple-gemstone-necklace-desktop.webp 1x, img/catalog-img/purple-gemstone-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/purple-gemstone-necklace-desktop.jpg" srcset="img/catalog-img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="Purple Amethyst Pendant">
+                  <source type="image/webp" srcset="img/catalog-img/purple-gemstone-necklace-tablet.webp 1x, img/catalog-img/purple-gemstone-necklace-tablet@2x.webp 2x">
+                  <img loading="lazy" src="img/catalog-img/purple-gemstone-necklace-desktop.jpg" srcset="img/catalog-img/purple-gemstone-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="Purple Amethyst Pendant">
                 </picture>
-                <p>Necklace with amethyst<span>$ 145</span></p>
+                <p>Necklace with amethyst</p>
+                <p>$ 145</p>
               </figure>
             </a>
           </li>
@@ -276,9 +284,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/elephant-earrings-desktop.webp 1x, img/catalog-img/elephant-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/elephant-earrings-desktop.jpg" srcset="img/catalog-img/elephant-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="gold earrings in the shape of an elephant inlaid with stones">
+                  <img loading="lazy" src="img/catalog-img/elephant-earrings-desktop.jpg" srcset="img/catalog-img/elephant-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="gold earrings in the shape of an elephant inlaid with stones">
                 </picture>
-                <p>Elephant earrings<span>$ 95</span></p>
+                <p>Elephant earrings</p>
+                <p>$ 95</p>
               </figure>
             </a>
           </li>
@@ -289,9 +298,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/threader-necklace-closeup-desktop.webp 1x, img/catalog-img/threader-necklace-closeup-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/threader-necklace-closeup-desktop.jpg" srcset="img/catalog-img/threader-necklace-closeup-desktop@2x.jpg 2x" width="270" height="284" alt="silver bracelet">
+                  <img loading="lazy" src="img/catalog-img/threader-necklace-closeup-desktop.jpg" srcset="img/catalog-img/threader-necklace-closeup-desktop@2x.jpg 2x" width="270" height="272" alt="silver bracelet">
                 </picture>
-                <p>Threader necklace<span>$ 115</span></p>
+                <p>Threader necklace</p>
+                <p>$ 115</p>
               </figure>
             </a>
           </li>
@@ -302,9 +312,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/origami-crane-necklace-desktop.webp 1x, img/catalog-img/origami-crane-necklace-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/origami-crane-necklace-desktop.jpg" srcset="img/catalog-img/origami-crane-necklace-desktop@2x.jpg 2x" width="270" height="284" alt="original silver pendant with insert">
+                  <img loading="lazy" src="img/catalog-img/origami-crane-necklace-desktop.jpg" srcset="img/catalog-img/origami-crane-necklace-desktop@2x.jpg 2x" width="270" height="272" alt="original silver pendant with insert">
                 </picture>
-                <p>Origami crane necklace<span>$ 105</span></p>
+                <p>Origami crane necklace</p>
+                <p>$ 105</p>
               </figure>
             </a>
           </li>
@@ -315,9 +326,10 @@
                 <picture>
                   <!-- 1x: 270 ; 2x: 540 -->
                   <source type="image/webp" srcset="img/catalog-img/marble-earrings-desktop.webp 1x, img/catalog-img/marble-earrings-desktop@2x.webp 2x">
-                  <img loading="lazy" src="img/catalog-img/marble-earrings-desktop.jpg" srcset="img/catalog-img/marble-earrings-desktop@2x.jpg 2x" width="270" height="284" alt="silver earrings with a marble stone">
+                  <img loading="lazy" src="img/catalog-img/marble-earrings-desktop.jpg" srcset="img/catalog-img/marble-earrings-desktop@2x.jpg 2x" width="270" height="272" alt="silver earrings with a marble stone">
                 </picture>
-                <p>Marble earrings<span>$ 95</span></p>
+                <p>Marble earrings</p>
+                <p>$ 95</p>
               </figure>
             </a>
           </li>
@@ -325,11 +337,11 @@
         <div class="product-catalog__pagination">
           <button class="product-catalog__pagination-btn" type="button">Previous</button>
           <ul class="product__pagination-list product-catalog__pagination-list">
-            <li class="product__pagination-item product-catalog__pagination-item product__pagination-item--active">1</li>
-            <li class="product__pagination-item product-catalog__pagination-item">2</li>
-            <li class="product__pagination-item product-catalog__pagination-item">3</li>
-            <li class="product__pagination-item product-catalog__pagination-item">4</li>
-            <li class="product__pagination-item product-catalog__pagination-item">5</li>
+            <li class="product__pagination-item product-catalog__pagination-item product__pagination-item--active" tabindex="0">1</li>
+            <li class="product__pagination-item product-catalog__pagination-item" tabindex="0">2</li>
+            <li class="product__pagination-item product-catalog__pagination-item" tabindex="0">3</li>
+            <li class="product__pagination-item product-catalog__pagination-item" tabindex="0">4</li>
+            <li class="product__pagination-item product-catalog__pagination-item" tabindex="0">5</li>
           </ul>
           <button class="product-catalog__pagination-btn" type="button">Next</button>
         </div>
@@ -408,7 +420,7 @@
         <form class="modal-login__form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modal-login__input-email">
             <label class="visually-hidden" for="login-email-id">Enter your email</label>
-            <input type="text" name="login-email" id="login-email-id" placeholder="Your E-mail" required="">
+            <input type="email" name="login-email" id="login-email-id" placeholder="Your E-mail" required="">
           </div>
           <div class="modal-login__input-password">
             <label class="visually-hidden" for="login-password-id">Enter your password</label>
